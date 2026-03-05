@@ -8,18 +8,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Nodejs version management (lazy loading)
-_load_nvm() {
-    unset -f nvm node npm npx
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-
-nvm() { _load_nvm; nvm "$@"; }
-node() { _load_nvm; node "$@"; }
-npm() { _load_nvm; npm "$@"; }
-npx() { _load_nvm; npx "$@"; }
+# fnm (nodejs manager)
+FNM_PATH="/home/gal/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  # eval "`fnm env`"
+  eval "$(fnm env --use-on-cd)" # automatically switch node version based on directory
+fi
 
 # Homebrew
 if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
