@@ -117,6 +117,6 @@ if ! shopt -oq posix; then
 fi
 
 # source personal .bashrc additions
-if [ -f ~/.bash_personal ]; then
-    . ~/.bash_personal
+if [ -f ~/.bashrc_personal ]; then
+    . ~/.bashrc_personal
 fi
