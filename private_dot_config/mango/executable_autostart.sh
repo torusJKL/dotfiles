@@ -8,4 +8,8 @@ swayidle -w \
   timeout 1800 'systemctl suspend' \
   before-sleep 'swaylock -f --color 1e1e2e' &
 
-waybar &
+waybar >/dev/null 2>&1 &
+
+nm-applet >/dev/null 2>&1 &
+
+blueman-applet >/dev/null 2>&1 &
