@@ -28,6 +28,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Emacs
 alias ec='emacsclient -nw'
 
+# bat
+alias bat='batcat'
+
 # Rust
 if [ -f "$HOME/.cargo/env" ]; then
     . "$HOME/.cargo/env"
