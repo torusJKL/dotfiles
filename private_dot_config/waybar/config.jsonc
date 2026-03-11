@@ -81,9 +81,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "󰥔 {:%d/%m/%Y}",
-        "format": "󰥔 {:%H:%M}"
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt": "🗓 {:%d.%m.%Y  ⏲ %H:%M}",
+        "format": "📅 {:%d.%m.%Y  🕘 %H:%M}"
     },
     "battery": {
         "states": {
