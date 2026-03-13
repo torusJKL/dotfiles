@@ -1,0 +1,13 @@
+Control+Shift+c="exesel:copy_to_clip" # requires additional setup (see below)
+Control+Shift+v="proto:paste clipboard"
+Button3="proto:paste clipboard"   # right-click pastes
+
+# copy with xsel:
+#
+# sudo apt install xsel
+# mkdir -p ~/bin
+# cat > ~/bin/copy_to_clip << 'EOF'
+# #!/bin/sh
+# echo "$@" | xsel -i --clipboard
+# EOF
+# chmod +x ~/bin/copy_to_clip
