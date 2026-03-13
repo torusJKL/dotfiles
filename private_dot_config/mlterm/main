@@ -1,0 +1,15 @@
+# Font settings
+use_aafont = true
+use_anti_alias = true
+fontsize = 18
+
+# Dark background
+bg_color = #303446
+fg_color = #c6d0f5
+
+# Nice extras for a modern feel
+cursor_bg_color = #f2d5cf
+cursor_fg_color = #303446
+# use_scrollbar = false
+# scrollbar_mode = right
+use_mdi = false   # disables scrollbar and screen splitting
