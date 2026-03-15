@@ -31,7 +31,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Emacs
-alias ec='emacsclient -nw'
+alias ec="emacsclient -r -n -a ''"
 
 # bat
 alias bat='batcat'
