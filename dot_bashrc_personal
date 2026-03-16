@@ -43,3 +43,6 @@ fi
 
 # Add .NET Core SDK tools
 export PATH="$PATH:/home/gal/.dotnet/tools"
+
+# use starship for the shell prompt
+eval "$(starship init bash)"
