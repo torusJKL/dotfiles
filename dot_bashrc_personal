@@ -46,3 +46,7 @@ export PATH="$PATH:/home/gal/.dotnet/tools"
 
 # use starship for the shell prompt
 eval "$(starship init bash)"
+
+# opencode
+export PATH=/home/gal/.opencode/bin:$PATH
+alias opencode="nono run --allow-cwd --profile opencode -- opencode"
