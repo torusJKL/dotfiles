@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "name": "claude-code",
+    "version": "1.0.0",
+    "description": "Claude Code with additional project access + .Net"
+  },
+  "security": {
+    "groups": ["git_config"]
+  },
+  "filesystem": {
+    "allow": ["$WORKDIR", "$HOME/.claude"],
+    "read": [
+      "/proc",
+      "$HOME/.nuget",
+      "$HOME/.cargo",
+      "$HOME/.rustup",
+      "$HOME/shared-libs",
+      "$HOME/.local/share/claude",
+      "$HOME/.local/share/fnm",
+      "$HOME/.local/lib",
+      "$HOME/.cache/claude-cli-nodejs",
+      "$HOME/.npm",
+      "$HOME/.vscode"
+    ],
+    "write": ["$HOME/.cache/claude-cli-nodejs", "$HOME/.vscode"],
+    "allow_file": ["$HOME/.claude.json", "$HOME/.claude.json.lock"]
+  },
+  "network": {
+    "block": false
+  }
+}
