@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "name": "opencode-dotnet",
+    "description": "opencode + /proc for .NET"
+  },
+  "extends": "opencode",
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "read": [
+      "/proc",
+      "$XDG_CONFIG_HOME/opencode",
+      "$XDG_CACHE_HOME/opencode",
+      "$XDG_DATA_HOME/opencode",
+      "$XDG_DATA_HOME/opentui"
+    ],
+    "execute": [
+      "$HOME/.opencode/bin"
+    ]
+  },
+  "network": {
+    "block": false
+  }
+}

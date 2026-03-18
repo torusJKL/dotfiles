@@ -49,7 +49,7 @@ eval "$(starship init bash)"
 
 # opencode
 export PATH=/home/gal/.opencode/bin:$PATH
-alias opencode="nono run --allow-cwd --profile opencode -- opencode"
+alias opencode="nono run --allow-cwd --profile opencode-dotnet -- opencode"
 
 # eza - modern ls
 alias ls="eza"
