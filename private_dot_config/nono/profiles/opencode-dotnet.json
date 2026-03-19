@@ -10,14 +10,15 @@
   "filesystem": {
     "read": [
       "/proc",
+      "$HOME/.nuget",
+      "$HOME/.local/share/NuGet",
       "$XDG_CONFIG_HOME/opencode",
       "$XDG_CACHE_HOME/opencode",
       "$XDG_DATA_HOME/opencode",
       "$XDG_DATA_HOME/opentui"
     ],
-    "execute": [
-      "$HOME/.opencode/bin"
-    ]
+    "write": ["$HOME/.nuget", "$HOME/.local/share/NuGet"],
+    "execute": ["$HOME/.opencode/bin"]
   },
   "network": {
     "block": false

@@ -12,6 +12,7 @@
     "read": [
       "/proc",
       "$HOME/.nuget",
+      "$HOME/.local/share/NuGet",
       "$HOME/.cargo",
       "$HOME/.rustup",
       "$HOME/shared-libs",
@@ -22,7 +23,11 @@
       "$HOME/.npm",
       "$HOME/.vscode"
     ],
-    "write": ["$HOME/.cache/claude-cli-nodejs", "$HOME/.vscode"],
+    "write": [
+      "$HOME/.cache/claude-cli-nodejs",
+      "$HOME/.vscode",
+      "$HOME/.local/share/NuGet"
+    ],
     "allow_file": ["$HOME/.claude.json", "$HOME/.claude.json.lock"]
   },
   "network": {
