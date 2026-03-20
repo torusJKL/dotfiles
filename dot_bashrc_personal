@@ -60,3 +60,7 @@ alias claude="nono run --profile claude-code-dotnet -- claude"
 
 # zoxide - better cd
 eval "$(zoxide init bash)"
+
+# zig
+export ZIG_INSTALL="$HOME/.local/bin/zig"
+export PATH="$ZIG_INSTALL:$PATH"
