@@ -53,7 +53,7 @@ alias opencode="nono run --allow-cwd --profile opencode-dotnet -- opencode"
 
 # eza - modern ls
 alias ls="eza"
-alias ll="eza -l"
+alias ll="eza -lg"
 
 # claude code
 alias claude="nono run --profile claude-code-dotnet -- claude"
