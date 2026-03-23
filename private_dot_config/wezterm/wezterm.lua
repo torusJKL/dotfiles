@@ -7,6 +7,7 @@ config.colors = {
 }
 
 config.keys = {
+    -- Send special commands for Emacs
     {
         key = ",",
         mods = "CTRL",
@@ -21,6 +22,20 @@ config.keys = {
         key = "DownArrow",
         mods = "CTRL|SHIFT",
         action = wezterm.action.SendString("\x1b[1;6B"),  -- ESC [ 1 ; 6 B
+    },
+
+    -- Disable default ALT+Enter fullscreen toggle
+    {
+      key = "Enter",
+      mods = "ALT",
+      action = wezterm.action.DisableDefaultAssignment,
+    },
+
+    -- Add custom ALT+F fullscreen toggle
+    {
+      key = "f",
+      mods = "ALT",
+      action = wezterm.action.ToggleFullScreen,
     },
 }
 
