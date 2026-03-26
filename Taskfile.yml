@@ -1,0 +1,74 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+
+  os-update:
+    desc: Executes apt update & apt upgrade
+    cmds:
+      - sudo apt update
+      - sudo apt upgrade
+
+  fonts-update:
+    desc: Loads newly installed fonts
+    cmds:
+      - fc-cache -f -v
+
+  sr-status:
+    cmds:
+      - sudo snapraid status
+  sr-sync:
+    cmds:
+      - sudo snapraid sync --pre-hash
+
+  sr-scrub:
+    cmds:
+      - sudo snapraid scrub
+
+  sr-sync-scrub:
+    cmds:
+      - task: sr-sync
+      - task: sr-scrub
+
+  sr-fix:
+    cmds:
+      - sudo snapraid -e fix
+      - sudo snapraid -p bad scrub
+
+  images-remove-exif:
+    desc: Removes all EXIF data from image files in the working directory
+    dir: '{{.USER_WORKING_DIR}}'
+    prompt: Are you sure you want to delete all EXIF data?
+    cmds:
+      - exiftool -all= *
+
+  emacs-run-script:
+    cmds:
+      - emacs --script {{.CLI_ARGS}}
+
+  py-venv-*:
+    vars:
+      VENV: '{{index .MATCH 0}}'
+    dir: ~/PythonVenv/{{.VENV}}
+    cmds:
+      - source ~/PythonVenv/{{.VENV}}/bin/activate
+      - cd ~/PythonVenv/{{.VENV}}
+
+  py-venv-create-*:
+    vars:
+      VENV: '{{index .MATCH 0}}'
+    dir: ~/PythonVenv/
+    cmds:
+      - python3 -m venv ~/PythonVenv/{{.VENV}}
+
+  disk-serial-*:
+    vars:
+      DEVICE: '{{index .MATCH 0}}'
+    cmds:
+      - sudo lsblk -dno name,serial /dev/{{.DEVICE}}
+
+  ros-run:
+    cmds:
+      - rlwrap ros run
