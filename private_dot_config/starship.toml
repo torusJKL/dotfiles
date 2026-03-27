@@ -316,7 +316,7 @@ success_symbol = "[](fg:teal bg:blue)"
 symbol = "[](fg:teal bg:pink)[  $status](fg:red bg:pink)"
 
 [sudo]
-disabled = false
+disabled = true                 # conflict with YubiKey sudo auth (alternatively set higher timeout)
 format = "[ $symbol]($style)"
 style = "fg:rosewater bg:surface2"
 symbol = "󰌋"
