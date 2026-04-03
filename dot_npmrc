@@ -1,0 +1,5 @@
+# Supply chain hardening
+minimum-release-age=10080       # 7 days in minutes (requires npm v11.10.0+)
+ignore-scripts=true
+audit-level=moderate
+engine-strict=true
