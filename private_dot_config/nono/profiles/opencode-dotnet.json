@@ -17,8 +17,7 @@
       "$XDG_DATA_HOME/opencode",
       "$XDG_DATA_HOME/opentui"
     ],
-    "write": ["$HOME/.nuget", "$HOME/.local/share/NuGet"],
-    "execute": ["$HOME/.opencode/bin"]
+    "write": ["$HOME/.nuget", "$HOME/.local/share/NuGet"]
   },
   "network": {
     "block": false
