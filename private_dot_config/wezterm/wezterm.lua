@@ -7,6 +7,13 @@ config.colors = {
 }
 
 config.keys = {
+    -- Paste in Emacs using regular key bindings
+    {
+      key = "y",
+      mods = "CTRL",
+      action = wezterm.action.PasteFrom "Clipboard",
+    },
+
     -- Send special commands for Emacs
     {
         key = ",",
