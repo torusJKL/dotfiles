@@ -72,3 +72,8 @@ title-report = false
 # shell integration
 shell-integration = detect
 shell-integration-features = cursor,sudo,title
+
+# allow OSC52 clipboard access
+copy-on-select = clipboard
+clipboard-read = allow
+clipboard-write = allow
