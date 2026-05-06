@@ -67,3 +67,6 @@ eval "$(zoxide init bash)"
 # zig
 export ZIG_INSTALL="$HOME/.local/bin/zig"
 export PATH="$ZIG_INSTALL:$PATH"
+
+# llama.cpp
+export PATH=/home/gal/.local/bin/llama.cpp:$PATH
