@@ -45,21 +45,25 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # Add .NET Core SDK tools
-export PATH="$PATH:/home/gal/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # use starship for the shell prompt
 eval "$(starship init bash)"
 
 # opencode
-export PATH=/home/gal/.opencode/bin:$PATH
-alias opencode="nono run --allow-cwd --profile opencode-dotnet -- opencode"
+export PATH=$HOME/.opencode/bin:$PATH
+#alias opencode="nono run --allow-cwd --profile opencode-dotnet -- opencode"
+
+# Pi
+export PI_CODING_AGENT_DIR="$HOME/.config/pi/agent"
+alias pi="nono run --allow-cwd --profile pi -- $HOME/.bun/bin/pi"
 
 # eza - modern ls
 alias ls="eza"
 alias ll="eza -lg"
 
 # claude code
-alias claude="nono run --profile claude-code-dotnet -- claude"
+#alias claude="nono run --profile claude-code-dotnet -- claude"
 
 # zoxide - better cd
 eval "$(zoxide init bash)"
@@ -69,4 +73,5 @@ export ZIG_INSTALL="$HOME/.local/bin/zig"
 export PATH="$ZIG_INSTALL:$PATH"
 
 # llama.cpp
-export PATH=/home/gal/.local/bin/llama.cpp:$PATH
+export PATH="$HOME/code/llama.cpp/build/bin:$PATH"
+#export PATH=/home/gal/.local/bin/llama.cpp:$PATH
