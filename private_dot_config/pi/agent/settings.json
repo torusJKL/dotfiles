@@ -1,0 +1,13 @@
+{
+  "lastChangelogVersion": "0.75.5",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:@aliou/pi-guardrails",
+    "npm:@juicesharp/rpiv-web-tools",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@tintinweb/pi-tasks",
+    "npm:@tintinweb/pi-subagents"
+  ]
+}
