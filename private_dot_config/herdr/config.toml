@@ -1,0 +1,5 @@
+[keys]
+prefix = "super+b"
+
+[worktrees]
+directory = "~/code"
